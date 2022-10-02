@@ -1,0 +1,10 @@
+# Composer
+/vendor
+# Nodes/yarn
+/node_modules
+/yarn-error.log
+!javascripts/vendor
+!styles/vendor
+# Archives
+/*.tar
+/*.zip

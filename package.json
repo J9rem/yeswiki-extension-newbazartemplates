@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "postinstall": "node ./javascripts/extract-files-from-node-modules.js"
+  },
+  "devDependencies": {
+    "fs-extra": "^10.1.0",
+    "vis-network": "^9.1.2"
+  }
+}
