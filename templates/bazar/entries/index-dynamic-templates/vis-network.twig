@@ -1,0 +1,24 @@
+{# 
+This file is part of the YesWiki Extension newbazartemplates.
+
+Authors : see README.md file that was distributed with this source code.
+
+For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code. #}
+
+{% extends "@bazar/entries/index-dynamic.twig" %}
+
+{% set necessary_fields = (params.necessary_fields is defined ? params.necessary_fields|split(',') : [])|merge([]) %}
+
+{% block assets %}
+  {{ include_css('tools/newbazartemplates/styles/vendor/vis-network/vis-network.min.css') }}
+
+  {{ include_javascript('tools/newbazartemplates/javascripts/vendor/vis-network/vis-network.min.js') }}
+
+  {{ include_javascript('tools/newbazartemplates/javascripts/components/bazar/BazarVisNetwork.js', false, true) }}
+{% endblock %}
+
+{% block display_entries %}
+  <Bazar-Vis-Network :params="params">
+  </Bazar-Vis-Network>
+{% endblock %}
